@@ -58,7 +58,7 @@ Plain Node.js `fetch` plus HTML/JSON parsing. No headless browser, no login, no 
 - Profile pictures are proxied through `/api/avatar`, which only allows the Instagram and LinkedIn CDNs, because those CDNs block hotlinking.
 
 **Stack:**
-- Node.js 20+ serverless functions on Vercel (`api/*.js`), with the same handlers run locally by `server.js`
+- Node.js 20+ serverless functions on Vercel (`api/*.js`), with the same handlers run locally by `dev-server.js`
 - Google Gemini (`gemini-3.5-flash` for analysis, swipes and debriefs; `gemini-3.5-flash-lite` for date turns), with a per-model rate limiter and retry
 - A vanilla JS single-page front end
 - No database: the pre-run demo is a static JSON file, and people you add are kept in your browser's localStorage
