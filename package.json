@@ -1,0 +1,18 @@
+{
+  "name": "agentic-dating",
+  "version": "1.0.0",
+  "description": "Every person is represented by an AI agent that reads their LinkedIn + Instagram, then dates the other agents on their behalf.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "demo": "node scripts/run-demo.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.2"
+  }
+}

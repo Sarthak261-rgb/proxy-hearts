@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.vercel/
+data/verify-raw.json
+data/cache/
+video/
+test-results/
