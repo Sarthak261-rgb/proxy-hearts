@@ -39,7 +39,7 @@ Instagram (public) ┘                                         │
 ```
 
 1. **Read.** `lib/scrape.js` fetches the two public pages (details below).
-2. **Understand.** `analyzePerson` (Gemini 3.5 Flash, JSON mode) may use only the scraped text. Every need, hobby and interest carries a verbatim quote and its source, and the agent reports its own data quality and gaps. It also writes a voice guide for speaking on the person's behalf.
+2. **Understand.** `analyzePerson` (Gemini 3.5 Flash-Lite, JSON mode) may use only the scraped text. Every need, hobby and interest carries a verbatim quote and its source, and the agent reports its own data quality and gaps. It also writes a voice guide for speaking on the person's behalf.
 3. **Swipe.** Each agent sees the others' *public cards* only (name, headline, interests, values, lifestyle). It never sees their private brief. It scores interest from 0 to 100 for its own person, with a reason and a date idea.
 4. **Match.** `selectDates` pairs people by the geometric mean of the two interest scores, so one-sided crushes rank low. The strongest pairs date first, and everyone gets at least 2 dates and at most 3.
 5. **Date.** The more interested agent's date idea sets the scene. The agents alternate for 6 messages. Each message is its own model call, made by an agent that knows only its own person plus what has been said so far. Each date has three phases: open, then probe a need or dealbreaker, then close honestly. Every message carries a private thought and a vibe shift (−2..2) that the other side never sees.
@@ -59,7 +59,7 @@ Plain Node.js `fetch` plus HTML/JSON parsing. No headless browser, no login, no 
 
 **Stack:**
 - Node.js 20+ serverless functions on Vercel (`api/*.js`), with the same handlers run locally by `dev-server.js`
-- Google Gemini (`gemini-3.5-flash` for analysis, swipes and debriefs; `gemini-3.5-flash-lite` for date turns), with a per-model rate limiter and retry
+- Google Gemini (`gemini-3.5-flash-lite` for analysis, swipes and debriefs; `gemini-3.1-flash-lite` for date turns (Lite models, so the free tier covers a full 26-person run)), with a per-model rate limiter and retry
 - A vanilla JS single-page front end
 - No database: the pre-run demo is a static JSON file, and people you add are kept in your browser's localStorage
 

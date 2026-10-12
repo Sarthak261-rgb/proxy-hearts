@@ -142,7 +142,7 @@ function how() {
       <code>not dated: 0.9 × screen</code></p>
       <p>Add a new person and their agent swipes on the whole pool, the pool's agents review them back, and they go on live dates with their top three.</p>
       <h3>Stack</h3>
-      <p class="muted small">Node.js serverless functions on Vercel, native fetch + regex/JSON parsing for scraping, Gemini 3.5 Flash for analysis and Gemini 3.5 Flash-Lite for date turns, vanilla JS front end. The 25-person demo was produced by <code>scripts/run-demo.js</code> with the same code the website runs.</p>
+      <p class="muted small">Node.js serverless functions on Vercel, native fetch + regex/JSON parsing for scraping, Gemini 3.5 Flash-Lite for analysis and Gemini 3.1 Flash-Lite for date turns, vanilla JS front end. The 25-person demo was produced by <code>scripts/run-demo.js</code> with the same code the website runs.</p>
     </div>
   </div>`;
 }
