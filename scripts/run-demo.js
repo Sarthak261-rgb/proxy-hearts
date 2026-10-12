@@ -97,7 +97,7 @@ for (const id of ids) {
 // 4. Agents go on dates
 const plan = selectDates(ids, swipes, { minPer: 2, maxPer: 3 });
 log(`${plan.length} dates planned`);
-await pool(plan, 5, async (d) => {
+if (ONLY !== 'assemble') await pool(plan, 5, async (d) => {
   const f = `${CACHE}/dates/${dateKey(d.a, d.b)}.json`;
   if (read(f)) return;
   const res = await runDate(byId[d.a], byId[d.b], d.venue);

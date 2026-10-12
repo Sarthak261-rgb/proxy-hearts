@@ -73,7 +73,7 @@ main { max-width: 1160px; margin: 0 auto; padding: 28px 24px 60px; min-height: 7
 .chip { display: inline-block; padding: 3px 10px; border-radius: 999px; background: var(--surface-2); font-size: 13px; margin: 0 6px 6px 0; }
 .chip.accent { background: var(--accent-soft); color: var(--accent); }
 .chip.teal { background: var(--teal-soft); color: var(--teal); }
-.src { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .03em; padding: 1px 7px; border-radius: 5px; color: #fff; vertical-align: 1px; }
+.src { display: inline-block; align-self: flex-start; flex: none; line-height: 1.5; font-size: 11px; font-weight: 700; letter-spacing: .03em; padding: 1px 7px; border-radius: 5px; color: #fff; vertical-align: 1px; }
 .src.li { background: var(--li); }
 .src.ig { background: var(--ig); }
 .quote { font-size: 13px; color: var(--muted); border-left: 3px solid var(--line); padding-left: 10px; margin-top: 6px; font-style: italic; }

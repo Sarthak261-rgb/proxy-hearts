@@ -29,6 +29,7 @@ async function scrollThrough(page, { step = 120, pause = 90, max = 20000 } = {})
 
 const browser = await chromium.launch();
 async function segment(name, fn) {
+  if (process.env.SEGS && !process.env.SEGS.split(',').includes(name)) return;
   const ctx = await browser.newContext({
     viewport: { width: W, height: H },
     recordVideo: { dir: 'video/raw', size: { width: W, height: H } },
@@ -55,7 +56,7 @@ await segment('01-home', async (p) => {
 await segment('02-profile', async (p) => {
   await p.goto(`${BASE}/#/p/${star.id}`);
   await sleep(3500); // reading log animates in
-  await scrollThrough(p, { step: 70, pause: 110, max: 3600 });
+  await scrollThrough(p, { step: 50, pause: 140, max: 4000 });
   await p.click('details.raw summary').catch(() => {});
   await sleep(1500);
   await p.mouse.wheel(0, 350);
@@ -116,7 +117,7 @@ await segment('05-live', async (p) => {
 await segment('06-how', async (p) => {
   await p.goto(`${BASE}/#/how`);
   await sleep(2000);
-  await scrollThrough(p, { step: 80, pause: 120, max: 1800 });
+  await scrollThrough(p, { step: 40, pause: 150, max: 2200 });
   await sleep(1500);
 });
 

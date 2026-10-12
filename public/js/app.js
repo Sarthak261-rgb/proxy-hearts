@@ -49,7 +49,7 @@ function avatar(p, size = '') {
     ? `<img class="avatar ${size}" src="${esc(src)}" alt="${esc(p.name)}" loading="lazy" onerror="this.outerHTML='<span class=&quot;avatar ${size}&quot;>${esc(initials)}</span>'">`
     : `<span class="avatar ${size}">${esc(initials)}</span>`;
 }
-const srcTag = (s = '') => (/insta/i.test(s) ? '<span class="src ig">IG</span>' : '<span class="src li">in</span>');
+const srcTag = (s = '') => (/^\s*(ig|insta)/i.test(s) ?'<span class="src ig">IG</span>' : '<span class="src li">in</span>');
 const evidence = (e) => (e?.quote ? `<div class="quote">${srcTag(e.source)} “${esc(e.quote)}”</div>` : '');
 
 // ---------- router ----------
