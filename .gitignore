@@ -7,3 +7,4 @@ data/verify-raw.json
 data/cache/
 video/
 test-results/
+data/run.log
