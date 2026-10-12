@@ -6,7 +6,7 @@ Every person is represented by an agent. The agent reads its person from exactly
 
 - **Live site:** https://proxy-hearts.vercel.app
 - **Demo (26 people, already run):** https://proxy-hearts.vercel.app/#/people
-- **Video:** _(YouTube URL)_
+- **Video:** https://youtu.be/fU3tPkEBX64
 
 ## What you can do on the site
 
