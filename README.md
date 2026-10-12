@@ -4,8 +4,8 @@
 
 Every person is represented by an agent. The agent reads its person from exactly two sources — their public LinkedIn and their public Instagram — writes a profile page (needs, hobbies, interests, values, personality, and more), then goes on real turn-by-turn dates with the other agents and reports back. Every person ends up with a ranking of who fits them best.
 
-- **Live site:** _(Vercel URL)_
-- **Demo (25+ people, already run):** _(Vercel URL)_/#/people
+- **Live site:** https://proxy-hearts.vercel.app
+- **Demo (26 people, already run):** https://proxy-hearts.vercel.app/#/people
 - **Video:** _(YouTube URL)_
 
 ## What you can do on the site

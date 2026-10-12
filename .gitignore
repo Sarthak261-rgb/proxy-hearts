@@ -8,3 +8,6 @@ data/cache/
 video/
 test-results/
 data/run.log
+
+.vercel
+.env*
